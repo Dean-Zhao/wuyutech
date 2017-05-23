@@ -20,7 +20,7 @@ document.documentElement.className += ' oldie';
 <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" rel="shortcut icon" media="screen"/> -->
 <link href="../Font-Awesome-master4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="../bootstrap3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="../dist/css/common.min.css" rel="stylesheet" type="text/css" />
+<link href="../src/css/common.css" rel="stylesheet" type="text/css" />
 <script src="../dist/js/jquery2.min.js"></script>
 <script src="../bootstrap3.3.0/js/bootstrap.min.js" charset="utf-8"></script>
 <script src="../dist/js/common.min.js"></script>
@@ -53,19 +53,18 @@ document.documentElement.className += ' oldie';
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" class="btn btn-link">首页</a></li>
-        <li><a href="#" class="btn btn-link">产品服务</a></li>
+        <li><a href="#main" class="btn btn-link">首页</a></li>
+        <li><a href="#info" class="btn btn-link">产品服务</a></li>
         <li><a href="#" class="btn btn-link">案例展示</a></li>
-        <li><a href="#" class="btn btn-link">新闻中心</a></li>
         <li><a href="#" class="btn btn-link">关于我们</a></li>
-        <li><a href="#" class="btn btn-link">联系方式</a></li>
+        <li><a href="#footer" class="btn btn-link">联系方式</a></li>
        <!--  <li><a href="#" class="btn btn-link">登陆</a></li>
         <li><a href="#" class="btn btn-link">注册</a></li>-->
       </ul> 
     </div>
   </div>
 </nav>
-<div class="main">
+<div class="main" id="main">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -97,58 +96,96 @@ document.documentElement.className += ' oldie';
   </a>
 </div> 
 </div>
-<div class="info">
+<div class="info" id="info">
   <div class="container">
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-md-12 col-sm-12">
+    <span class="info_title">我们的服务</span>
+      <span>WHAT WE CAN DO FOR YOU</span>
+    </div>
+  </div>
    <div class="row">
      <div class="col-md-3 col-sm-6">
       <a href="javascript:void(0)" class="btn-link service-list">
-       <img src="../images/app.svg">
+       <img src="../images/app.svg" />
           </a>
        <span>手游APP</span>
        <span>商城APP</span>
        <span>社交APP</span>
        <span>企业管理APP</span>
-       <span>. . .</span>
-    
+       <span>. . .</span>   
      </div>
       <div class="col-md-3 col-sm-6">
       <a href="javascript:void(0)" class="btn-link service-list">
-       <img src="../images/sys.svg">
+       <img src="../images/sys.svg" />
         </a>
        <span>物流管理系统</span>
        <span>财务管理系统</span>
        <span>ERP系统</span>
        <span>企业OA系统</span>
-       <span>. . .</span>
-      
+       <span>. . .</span>    
      </div>
       <div class="col-md-3 col-sm-6">
       <a href="javascript:void(0)" class="btn-link service-list">
-       <img src="../images/wechat.svg">
+       <img src="../images/wechat.svg" />
        </a>
        <span>公众号在线商城</span>
        <span>公众号线上餐厅</span>
        <span>微信电子会员</span>
        <span>公众号营销</span>
-       <span>. . .</span>
-       
+       <span>. . .</span>      
      </div>
       <div class="col-md-3 col-sm-6">
       <a href="javascript:void(0)" class="btn-link service-list">
-       <img src="../images/web.svg">
+       <img src="../images/web.svg" />
        </a>
        <span>企业／个人网站</span>
        <span>在线购物商城</span>
        <span>网站SEO优化</span>
        <span>网站后台管理维护</span>
-       <span>. . .</span>
-       
+       <span>. . .</span>       
+     </div>
+   </div>
+  </div>
+</div>
+<div class="samples">
+  <div class="container">
+   <div class="row" style="margin-bottom: 50px;">
+    <div class="col-md-12 col-sm-12">
+      <span class="info_title">我们的案例</span>
+      <span>WHAT WE DID FOR OUR CLIENTS</span>
+    </div>
+  </div>
+   <div class="row">
+     <div class="samples_iterm col-md-6 col-sm-12">
+       <img src="../images/test1.png" class="samples_pics" />
+       <div class="samples_covers">
+         <span class="samples_covers_title">运城市盐湖区政法委"便民随手拍"公众号建设</span>
+       </div>
+     </div>
+      <div class="samples_iterm col-md-6 col-sm-12">
+       <img src="../images/test1.png" class="samples_pics" />
+       <div class="samples_covers1">
+         <span class="samples_covers_title">运城市盐湖区政法委"便民随手拍"公众号建设</span>
+       </div>
+     </div>
+      <div class="samples_iterm col-md-6 col-sm-12">
+       <img src="../images/test1.png" class="samples_pics" />
+       <div class="samples_covers1">
+         <span class="samples_covers_title">运城市盐湖区政法委"便民随手拍"公众号建设</span>
+       </div>
+     </div>
+      <div class="samples_iterm col-md-6 col-sm-12">
+       <img src="../images/test1.png" class="samples_pics" />
+       <div class="samples_covers">
+         <span class="samples_covers_title">运城市盐湖区政法委"便民随手拍"公众号建设</span>
+       </div>
      </div>
    </div>
   </div>
 </div>
 <a href="#" id="toTop" class="toTop" ><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-<div class="footer">
+<div class="footer" id="footer">
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6">
@@ -168,18 +205,18 @@ document.documentElement.className += ' oldie';
       </div>
       <div class="col-md-3 col-sm-6">
         <ul class="list-unstyled">
-          <li class="footer_link title"><a href="#" class="btn btn-link">新闻中心</a></li>
-          <li class="footer_link"><a href="#" class="btn btn-link">企业新闻</a></li>
-          <li class="footer_link"><a href="#" class="btn btn-link">行业新闻</a></li>
+          <li class="footer_link title"><a href="#" class="btn btn-link">关于我们</a></li>
+          <li class="footer_link"><a href="#" class="btn btn-link">公司简介</a></li>
+          <li class="footer_link"><a href="#" class="btn btn-link">技术团队</a></li>        
         </ul>
       </div>
       <div class="col-md-3 col-sm-6">
-      <ul class="list-unstyled">
-          <li class="footer_link title"><a href="#" class="btn btn-link">关于我们</a></li>
-          <li class="footer_link"><a href="#" class="btn btn-link">公司简介</a></li>
-          <li class="footer_link"><a href="#" class="btn btn-link">技术团队</a></li>
-          <li class="footer_link"><a href="#" class="btn btn-link">技术特点</a></li>
-          <li class="footer_link"><a href="#" class="btn btn-link">联系我们</a></li>
+        <ul class="list-unstyled">
+           <li class="footer_link title"><a href="#" class="btn btn-link">联系我们</a></li>
+           <li class="footer_link"><span class="footer_info"><i class="fa fa-phone" aria-hidden="true"></i> 0359-2233222</span></li>
+           <li class="footer_link"><span class="footer_info"><i class="fa fa-envelope" aria-hidden="true"></i> wuyu@wuyutech.cn</span></li>
+           <li class="footer_link"><span class="footer_info"><i class="fa fa-qq" aria-hidden="true"></i> 1791578232</span></li>
+           <li class="footer_link"><span class="footer_info"><i class="fa fa-map-marker" aria-hidden="true"></i> 运城市盐湖区府东街263号</span></li>
         </ul>
       </div>
     </div>
