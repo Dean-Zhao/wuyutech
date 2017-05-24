@@ -184,6 +184,31 @@ document.documentElement.className += ' oldie';
    </div>
   </div>
 </div>
+<div class="info" id="info">
+  <div class="container">
+  <div class="row" style="margin-bottom: 30px;">
+    <div class="col-md-12 col-sm-12">
+    <span class="info_title">快速咨询</span>
+    <span>WE CAN PROVIDE BEST SERVICE FOR YOU</span>
+    <!--   -->
+    </div>
+  </div>
+   <div class="row">
+     <div class="col-md-12 col-sm-12">
+        <input  type="text" class="form-control visitors" id="visitor_name" placeholder="请填写您的姓名"> 
+     </div>
+      <div class="col-md-12 col-sm-12">
+        <input  type="text" class="form-control visitors" id="visitor_phone" placeholder="请填写您的联系方式">
+     </div>
+     <div class="col-md-12 col-sm-12">
+        <textarea class="form-control visitors" id="visitor_content" placeholder="请简述您的问题（300字限制）" maxlength="300" rows="3"></textarea>
+     </div>
+     <div class="col-md-12 col-sm-12">
+        <button class="btn form-control visitors" id="visitor_confirm" style="border:1px solid #34b6d9;color:#34b6d9;" onclick="confirm_visitor()">提交</button>
+     </div>
+   </div>
+  </div>
+</div>
 <a href="#" id="toTop" class="toTop" ><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 <div class="footer" id="footer">
   <div class="container">
@@ -222,5 +247,52 @@ document.documentElement.className += ' oldie';
     </div>
   </div>
 </div> 
+<!-- <div class="alert alert-success fade in">
+  <a href="#" class="close" data-dismiss="alert">
+    &times;
+  </a>
+  <strong>提交成功！</strong>我们的工作人员会及时给您提供反馈意见！
+</div> -->
+<div class="alert alert-success collapse fade in" id="confirm_success" style="display: none;">
+  <button button type="button" class="close" aria-label="Close" onclick="close_pop()">
+    &times;
+  </button> 
+  <strong>提交成功！</strong>感谢您的咨询，我们的工作人员会及时给您提供反馈意见！
+</div>
+<div class="alert alert-danger collapse fade in" id="confirm_error" style="display: none;">
+  <button button type="button" class="close" aria-label="Close" onclick="close_pop()">
+    &times;
+  </button> 
+  <strong>提交失败！</strong>抱歉，由于未知原因导致您的咨询信息未能成功提交，请稍后再试！
+</div>
+<script type="text/javascript">
+function confirm_visitor(){
+  var visitor_name=$("#visitor_name").val();
+  var visitor_phone=$("#visitor_phone").val();
+  var visitor_content=$("#visitor_content").val();
+  $.ajax({
+    url:'/addcontent',
+    type : "Post",
+    data : {"visitor_name":visitor_name,"visitor_phone":visitor_phone,"visitor_content":visitor_content},
+    dataType : "json",
+    success:function(data)
+    {
+      if(data.success===0){
+        $("#confirm_success").slideDown();
+      }else{
+        $("#confirm_error").slideDown();
+      }
+      
+    },
+    error:function(data)
+    {
+      $("#confirm_error").slideDown();
+    }
+  });
+}
+ function close_pop(){
+    $(".alert").slideUp();
+ }
+</script>
 </body>
 </html>
